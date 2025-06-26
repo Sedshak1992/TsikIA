@@ -1,8 +1,6 @@
 # TsikIA - Fichiers à copier sur GitHub Mobile
 
-## 1. Créer le fichier `main.py`
-
-```python
+## 1. Créer le fichier 
 import os
 import json
 import uuid
