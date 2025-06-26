@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans TsikIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .tsikia-body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; min-height: 100vh; }
+        .tsikia-header { background: #161b22; border-bottom: 1px solid #30363d; }
+        .tsikia-title { color: #58a6ff; font-size: 1.5rem; font-weight: 600; }
+        .pricing-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .pricing-card.popular { border-color: #58a6ff; box-shadow: 0 0 0 1px rgba(88, 166, 255, 0.3); }
+        .plan-name { font-size: 1.25rem; font-weight: 600; color: #e6edf3; }
+        .plan-price { font-size: 2rem; font-weight: 700; color: #58a6ff; }
+        .plan-features { list-style: none; padding: 0; margin: 20px 0; }
+        .plan-features li { padding: 8px 0; color: #8b949e; }
+        .plan-features li i { color: #238636; margin-right: 8px; }
+        .popular-badge { background: #58a6ff; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; }
+    </style>
+</head>
+<body class="tsikia-body">
+    <div class="tsikia-header">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <h1 class="tsikia-title mb-0">TsikIA</h1>
+                <a href="/" class="btn btn-sm btn-outline-light">Retour au Chat</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="text-center mb-5">
+            <h2 class="mb-3">Choisissez votre plan TsikIA</h2>
+            <p class="text-muted">Accédez à l'IA malagasy développée par Sedric TSILAVINA</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="pricing-card">
+                    <div class="plan-name">{{ plans.free.name }}</div>
+                    <div class="plan-price">${{ plans.free.price }}<span class="fs-6 text-muted">/mois</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>{{ plans.free.daily_quota }} messages par jour</li>
+                        <li><i class="fas fa-check"></i>Tous les dialectes malagasy</li>
+                        <li><i class="fas fa-check"></i>Support culturel</li>
+                        <li><i class="fas fa-check"></i>Interface simple</li>
+                    </ul>
+                    <button class="btn btn-outline-primary w-100" disabled>Plan actuel</button>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="pricing-card popular">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div class="plan-name">{{ plans.basic.name }}</div>
+                        <span class="popular-badge">Plus populaire</span>
+                    </div>
+                    <div class="plan-price">${{ plans.basic.price }}<span class="fs-6 text-muted">/mois</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>{{ plans.basic.daily_quota }} messages par jour</li>
+                        <li><i class="fas fa-check"></i>Tous les dialectes malagasy</li>
+                        <li><i class="fas fa-check"></i>Support culturel avancé</li>
+                        <li><i class="fas fa-check"></i>Réponses prioritaires</li>
+                        <li><i class="fas fa-check"></i>Aide administrative</li>
+                    </ul>
+                    <button class="btn btn-primary w-100">Bientôt disponible</button>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="pricing-card">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div class="plan-name">{{ plans.premium.name }}</div>
+                        <span class="badge bg-success">Meilleure valeur</span>
+                    </div>
+                    <div class="plan-price">${{ plans.premium.price }}<span class="fs-6 text-muted">/mois</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>{{ plans.premium.daily_quota }} messages par jour</li>
+                        <li><i class="fas fa-check"></i>Tous les dialectes malagasy</li>
+                        <li><i class="fas fa-check"></i>Expert culturel personnel</li>
+                        <li><i class="fas fa-check"></i>Support prioritaire 24/7</li>
+                        <li><i class="fas fa-check"></i>Conseils personnalisés</li>
+                        <li><i class="fas fa-check"></i>Accès aux nouvelles fonctionnalités</li>
+                    </ul>
+                    <button class="btn btn-success w-100">Bientôt disponible</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="text-muted">
+                <i class="fas fa-heart text-danger"></i> 
+                Développé par <strong>Sedric TSILAVINA</strong> pour faciliter l'accès digital aux Malagasy
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+                      </html>
